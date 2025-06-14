@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 'use client'
 
 import type React from 'react'
@@ -48,7 +49,7 @@ export default function ProveedorFeedPage() {
   const [likedSolicitudes, setLikedSolicitudes] = useState<string[]>([])
   const [isLoading, setIsLoading] = useState(false)
 
-  const handleSubmitOffer = (id: string) => {
+  const handleSubmitOffer = () => {
     setIsLoading(true)
 
     // Simulación de envío
@@ -233,9 +234,9 @@ export default function ProveedorFeedPage() {
   }, [])
 
   return (
-    <div className='flex flex-col min-h-screen bg-background'>
+    <div className='w-full flex flex-col min-h-screen bg-background'>
       {/* Header mejorado */}
-      <header className='sticky top-0 z-50 flex items-center justify-between p-4 border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60'>
+      <header className='container-custom sticky top-0 z-50 flex items-center justify-between p-4 border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60'>
         <Link href='/dashboard/proveedor' className='flex items-center gap-2'>
           <Package className='h-6 w-6 text-secondary' />
           <h1 className='text-xl font-bold logo-text'>SupplyConnect</h1>
@@ -275,7 +276,7 @@ export default function ProveedorFeedPage() {
       </header>
 
       {/* Main content */}
-      <main className='flex-1 container max-w-5xl py-6 px-4'>
+      <main className='flex-1 container-custom max-w-5xl py-6 px-4'>
         {/* Dashboard Stats */}
         <div className='mb-8'>
           <h2 className='text-2xl font-bold mb-4'>Dashboard del Proveedor</h2>

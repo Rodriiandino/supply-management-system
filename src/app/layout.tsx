@@ -8,8 +8,7 @@ const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
   title: 'SupplyConnect - Sistema de Gestión de Abastecimiento',
-  description: 'Plataforma para conectar empresas con proveedores de insumos',
-  generator: 'v0.dev'
+  description: 'Plataforma para conectar empresas con proveedores de insumos'
 }
 
 export default function RootLayout({
