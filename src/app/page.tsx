@@ -62,7 +62,7 @@ export default function Home() {
                   eficiencia.
                 </p>
               </div>
-              <div className='flex flex-col gap-2 min-[400px]:flex-row'>
+              <div className='flex flex-col gap-2 md:flex-row'>
                 <Link href='/register?type=empresa'>
                   <Button size='lg' className='w-full'>
                     Registrarse como Empresa
@@ -74,7 +74,7 @@ export default function Home() {
                   </Button>
                 </Link>
               </div>
-              <div className='flex items-center space-x-4 text-sm text-muted-foreground'>
+              <div className='w-full flex items-center space-x-4 text-sm text-muted-foreground flex-wrap'>
                 <div className='flex items-center'>
                   <CheckCircle className='mr-1 h-4 w-4 text-secondary' />
                   <span>Registro gratuito</span>
@@ -323,31 +323,31 @@ export default function Home() {
           </div>
 
           <div className='relative mt-16'>
-            {/* Timeline connector */}
-            <div className='absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-muted'></div>
+            {/* Timeline connector - only visible on desktop */}
+            <div className='absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-muted hidden md:block'></div>
 
             {/* Steps */}
-            <div className='space-y-12 relative'>
+            <div className='space-y-8 md:space-y-12 relative'>
               {/* Step 1 */}
               <div className='flex flex-col md:flex-row items-center'>
-                <div className='md:w-1/2 md:pr-12 md:text-right'>
+                <div className='w-full md:w-1/2 md:pr-12 md:text-right'>
                   <Badge variant='secondary' className='mb-2'>
                     Paso 1
                   </Badge>
-                  <h3 className='text-2xl font-bold mb-2'>
+                  <h3 className='text-xl md:text-2xl font-bold mb-2'>
                     Creación de Solicitud
                   </h3>
-                  <p className='text-muted-foreground'>
+                  <p className='text-muted-foreground text-sm md:text-base'>
                     Las empresas crean solicitudes detalladas especificando sus
                     necesidades, cantidades, plazos y otros requisitos
                     relevantes.
                   </p>
                 </div>
-                <div className='mx-auto md:mx-0 my-4 md:my-0 z-10 flex items-center justify-center w-12 h-12 rounded-full bg-primary text-primary-foreground'>
+                <div className='hidden md:flex mx-auto md:mx-0 my-4 md:my-0 z-10 items-center justify-center w-12 h-12 rounded-full bg-primary text-primary-foreground'>
                   1
                 </div>
-                <div className='md:w-1/2 md:pl-12 md:text-left'>
-                  <div className='bg-muted rounded-lg p-4 mt-4 md:mt-0'>
+                <div className='w-full md:w-1/2 md:pl-12 md:text-left mt-4 md:mt-0'>
+                  <div className='bg-muted rounded-lg p-4'>
                     <div className='flex items-center gap-2 mb-2'>
                       <Building2 className='h-5 w-5 text-primary' />
                       <span className='font-medium'>Empresa</span>
@@ -372,7 +372,7 @@ export default function Home() {
 
               {/* Step 2 */}
               <div className='flex flex-col md:flex-row items-center'>
-                <div className='md:w-1/2 md:pr-12 md:text-right order-1 md:order-1'>
+                <div className='w-full md:w-1/2 md:pr-12 md:text-right order-1 md:order-1'>
                   <div className='bg-muted rounded-lg p-4 mt-4 md:mt-0'>
                     <div className='flex items-center gap-2 mb-2'>
                       <Truck className='h-5 w-5 text-primary' />
@@ -394,17 +394,17 @@ export default function Home() {
                     </ul>
                   </div>
                 </div>
-                <div className='mx-auto md:mx-0 my-4 md:my-0 z-10 flex items-center justify-center w-12 h-12 rounded-full bg-primary text-primary-foreground order-0 md:order-2'>
+                <div className='hidden md:flex mx-auto md:mx-0 my-4 md:my-0 z-10 items-center justify-center w-12 h-12 rounded-full bg-primary text-primary-foreground order-0 md:order-2'>
                   2
                 </div>
-                <div className='md:w-1/2 md:pl-12 md:text-left order-2 md:order-3'>
+                <div className='w-full md:w-1/2 md:pl-12 md:text-left order-0 md:order-3'>
                   <Badge variant='secondary' className='mb-2'>
                     Paso 2
                   </Badge>
-                  <h3 className='text-2xl font-bold mb-2'>
+                  <h3 className='text-xl md:text-2xl font-bold mb-2'>
                     Presentación de Ofertas
                   </h3>
-                  <p className='text-muted-foreground'>
+                  <p className='text-muted-foreground text-sm md:text-base'>
                     Los proveedores revisan las solicitudes y presentan sus
                     ofertas detallando precios, condiciones, plazos de entrega y
                     valor agregado.
@@ -414,24 +414,24 @@ export default function Home() {
 
               {/* Step 3 */}
               <div className='flex flex-col md:flex-row items-center'>
-                <div className='md:w-1/2 md:pr-12 md:text-right'>
+                <div className='w-full md:w-1/2 md:pr-12 md:text-right'>
                   <Badge variant='secondary' className='mb-2'>
                     Paso 3
                   </Badge>
-                  <h3 className='text-2xl font-bold mb-2'>
+                  <h3 className='text-xl md:text-2xl font-bold mb-2'>
                     Comunicación y Negociación
                   </h3>
-                  <p className='text-muted-foreground'>
+                  <p className='text-muted-foreground text-sm md:text-base'>
                     Empresas y proveedores utilizan el sistema de mensajería
                     integrado para aclarar dudas, negociar términos y afinar
                     detalles.
                   </p>
                 </div>
-                <div className='mx-auto md:mx-0 my-4 md:my-0 z-10 flex items-center justify-center w-12 h-12 rounded-full bg-primary text-primary-foreground'>
+                <div className='hidden md:flex mx-auto md:mx-0 my-4 md:my-0 z-10 items-center justify-center w-12 h-12 rounded-full bg-primary text-primary-foreground'>
                   3
                 </div>
-                <div className='md:w-1/2 md:pl-12 md:text-left'>
-                  <div className='bg-muted rounded-lg p-4 mt-4 md:mt-0'>
+                <div className='w-full md:w-1/2 md:pl-12 md:text-left mt-4 md:mt-0'>
+                  <div className='bg-muted rounded-lg p-4'>
                     <div className='flex items-center gap-2 mb-2'>
                       <MessageSquare className='h-5 w-5 text-primary' />
                       <span className='font-medium'>Interacción</span>
@@ -456,7 +456,7 @@ export default function Home() {
 
               {/* Step 4 */}
               <div className='flex flex-col md:flex-row items-center'>
-                <div className='md:w-1/2 md:pr-12 md:text-right order-1 md:order-1'>
+                <div className='w-full md:w-1/2 md:pr-12 md:text-right order-1 md:order-1'>
                   <div className='bg-muted rounded-lg p-4 mt-4 md:mt-0'>
                     <div className='flex items-center gap-2 mb-2'>
                       <Building2 className='h-5 w-5 text-primary' />
@@ -478,17 +478,17 @@ export default function Home() {
                     </ul>
                   </div>
                 </div>
-                <div className='mx-auto md:mx-0 my-4 md:my-0 z-10 flex items-center justify-center w-12 h-12 rounded-full bg-primary text-primary-foreground order-0 md:order-2'>
+                <div className='hidden md:flex mx-auto md:mx-0 my-4 md:my-0 z-10 items-center justify-center w-12 h-12 rounded-full bg-primary text-primary-foreground order-0 md:order-2'>
                   4
                 </div>
-                <div className='md:w-1/2 md:pl-12 md:text-left order-2 md:order-3'>
+                <div className='w-full md:w-1/2 md:pl-12 md:text-left order-0 md:order-3'>
                   <Badge variant='secondary' className='mb-2'>
                     Paso 4
                   </Badge>
-                  <h3 className='text-2xl font-bold mb-2'>
+                  <h3 className='text-xl md:text-2xl font-bold mb-2'>
                     Selección de Oferta
                   </h3>
-                  <p className='text-muted-foreground'>
+                  <p className='text-muted-foreground text-sm md:text-base'>
                     La empresa evalúa todas las ofertas recibidas y selecciona
                     la que mejor se adapta a sus necesidades, considerando
                     precio, calidad y plazos.
@@ -498,24 +498,24 @@ export default function Home() {
 
               {/* Step 5 */}
               <div className='flex flex-col md:flex-row items-center'>
-                <div className='md:w-1/2 md:pr-12 md:text-right'>
+                <div className='w-full md:w-1/2 md:pr-12 md:text-right'>
                   <Badge variant='secondary' className='mb-2'>
                     Paso 5
                   </Badge>
-                  <h3 className='text-2xl font-bold mb-2'>
+                  <h3 className='text-xl md:text-2xl font-bold mb-2'>
                     Entrega y Confirmación
                   </h3>
-                  <p className='text-muted-foreground'>
+                  <p className='text-muted-foreground text-sm md:text-base'>
                     El proveedor realiza la entrega según lo acordado y la
                     empresa confirma la recepción, evaluando el servicio y
                     cerrando el ciclo.
                   </p>
                 </div>
-                <div className='mx-auto md:mx-0 my-4 md:my-0 z-10 flex items-center justify-center w-12 h-12 rounded-full bg-primary text-primary-foreground'>
+                <div className='hidden md:flex mx-auto md:mx-0 my-4 md:my-0 z-10 items-center justify-center w-12 h-12 rounded-full bg-primary text-primary-foreground'>
                   5
                 </div>
-                <div className='md:w-1/2 md:pl-12 md:text-left'>
-                  <div className='bg-muted rounded-lg p-4 mt-4 md:mt-0'>
+                <div className='w-full md:w-1/2 md:pl-12 md:text-left mt-4 md:mt-0'>
+                  <div className='bg-muted rounded-lg p-4'>
                     <div className='flex items-center gap-2 mb-2'>
                       <Star className='h-5 w-5 text-primary' />
                       <span className='font-medium'>Finalización</span>

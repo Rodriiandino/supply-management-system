@@ -169,10 +169,12 @@ export default function DashboardPage() {
                             <ShoppingCart className='h-4 w-4' />
                             {solicitud.offers}
                           </div>
-                          <Button variant='ghost' size='icon'>
-                            <ArrowUpRight className='h-4 w-4' />
-                            <span className='sr-only'>Ver detalles</span>
-                          </Button>
+                          <Link href={`/dashboard/solicitudes/${solicitud.id}`}>
+                            <Button variant='ghost' size='icon'>
+                              <ArrowUpRight className='h-4 w-4' />
+                              <span className='sr-only'>Ver detalles</span>
+                            </Button>
+                          </Link>
                         </div>
                       </div>
                     ))}
@@ -260,10 +262,12 @@ export default function DashboardPage() {
                           >
                             {oferta.status}
                           </Badge>
-                          <Button variant='ghost' size='icon'>
-                            <ArrowUpRight className='h-4 w-4' />
-                            <span className='sr-only'>Ver detalles</span>
-                          </Button>
+                          <Link href={`/dashboard/solicitudes/${oferta.id}`}>
+                            <Button variant='ghost' size='icon'>
+                              <ArrowUpRight className='h-4 w-4' />
+                              <span className='sr-only'>Ver detalles</span>
+                            </Button>
+                          </Link>
                         </div>
                       </div>
                     ))}

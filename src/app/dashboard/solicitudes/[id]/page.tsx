@@ -186,7 +186,7 @@ export default function SolicitudDetallePage({
                       <div className='text-lg font-bold'>{oferta.monto}</div>
                     </div>
                     <p className='text-sm'>{oferta.descripcion}</p>
-                    <div className='flex justify-end gap-2'>
+                    <div className='flex justify-end gap-2 flex-wrap'>
                       <Button
                         variant='outline'
                         size='sm'

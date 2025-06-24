@@ -341,7 +341,7 @@ export default function ProveedorFeedPage() {
 
         {/* Category filter */}
         <div className='mb-6 overflow-x-auto'>
-          <div className='flex space-x-2 pb-2'>
+          <div className='flex space-x-2 pb-2 flex-wrap gap-2 justify-center items-center'>
             {categories.map(category => (
               <Button
                 key={category}
@@ -590,7 +590,7 @@ export default function ProveedorFeedPage() {
                             className='flex-1'
                           />
                           <Button
-                            onClick={() => handleSubmitOffer(solicitud.id)}
+                            onClick={handleSubmitOffer}
                             size='sm'
                             disabled={
                               !offerPrice.trim() ||

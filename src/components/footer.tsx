@@ -1,8 +1,13 @@
+'use client'
+
 import Link from 'next/link'
 import { Separator } from './ui/separator'
 import { Facebook, Instagram, Linkedin, Package, Twitter } from 'lucide-react'
+import { usePathname } from 'next/navigation'
 
 export default function Footer() {
+  const pathname = usePathname()
+  const isHome = pathname === '/'
   return (
     <footer className='bg-background border-t py-12'>
       <div className='container-custom px-4 md:px-6'>
@@ -49,7 +54,7 @@ export default function Footer() {
             <ul className='space-y-2 text-sm'>
               <li>
                 <Link
-                  href='#features'
+                  href={isHome ? '#features' : '/#features'}
                   className='text-muted-foreground hover:text-foreground transition-colors'
                 >
                   Características
@@ -57,7 +62,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  href='#how-it-works'
+                  href={isHome ? '#how-it-works' : '/#how-it-works'}
                   className='text-muted-foreground hover:text-foreground transition-colors'
                 >
                   Cómo funciona
@@ -65,7 +70,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  href='#testimonials'
+                  href={isHome ? '#testimonials' : '/#testimonials'}
                   className='text-muted-foreground hover:text-foreground transition-colors'
                 >
                   Testimonios
@@ -73,7 +78,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  href='#about'
+                  href={isHome ? '#about' : '/#about'}
                   className='text-muted-foreground hover:text-foreground transition-colors'
                 >
                   Sobre nosotros
@@ -81,7 +86,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  href='#contact'
+                  href={isHome ? '#contact' : '/#contact'}
                   className='text-muted-foreground hover:text-foreground transition-colors'
                 >
                   Contacto

@@ -32,7 +32,6 @@ import {
   Package,
   CheckCircle2,
   Clock,
-  MoreHorizontal,
   AlertCircle
 } from 'lucide-react'
 import { useRouter } from 'next/navigation'
@@ -177,7 +176,7 @@ export default function SolicitudProveedorPage({
   }
 
   return (
-    <div className='flex flex-col min-h-screen bg-background'>
+    <div className='flex flex-col min-h-screen bg-background container-custom'>
       {/* Instagram-style header */}
       <header className='sticky top-0 z-50 flex items-center gap-2 p-4 border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60'>
         <Button variant='ghost' size='icon' onClick={() => router.back()}>
@@ -187,9 +186,6 @@ export default function SolicitudProveedorPage({
           <h1 className='text-lg font-semibold'>{solicitud.title}</h1>
           <p className='text-xs text-muted-foreground'>{solicitud.id}</p>
         </div>
-        <Button variant='ghost' size='icon'>
-          <MoreHorizontal className='h-5 w-5' />
-        </Button>
       </header>
 
       {/* Instagram-style content */}
